@@ -1,0 +1,1 @@
+<a href="{{ route('generate-csv') }}" class="btn btn-primary">Generuj plik CSV</a>

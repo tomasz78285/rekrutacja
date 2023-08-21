@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/generate-csv', [CustomerController::class, 'generateCSV'])->name('generate-csv');
+Route::get('/generating-csv', [CustomerController::class, 'generatingCSV'])->name('generating-csv');
